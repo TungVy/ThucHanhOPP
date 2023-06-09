@@ -18,7 +18,14 @@ public class Coordinates {
 		this.y = y;
 		this.nameCoor = nameCoor;
 	}
+	 
 	
+	@Override
+	public String toString() {
+		return nameCoor + "(" +x+","+y+ ")";
+	}
+	
+
 	//Các phương thức thiết lập (set), lấy (get) thông tin x, y và tên tọa độ.
 	public int getX() {
 		return x;
@@ -39,8 +46,4 @@ public class Coordinates {
 		this.nameCoor = nameCoor;
 	}
 	
-	
-
-	}
-
 }
