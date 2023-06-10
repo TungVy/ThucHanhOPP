@@ -1,5 +1,6 @@
 package Week1;
 
+//Bai 1:
 public class Coordinates {
 
 //  cac thuoc tinh: toa do x, toa do y va ten toa do.
