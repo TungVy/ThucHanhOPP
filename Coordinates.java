@@ -17,7 +17,13 @@ public class Coordinates {
         this.nameCoor = nameCoor;
     }
 
-//  phuong thuc thiet lap get, set
+//  Phuong thuc toString tra ve thong tin theo mau.
+    @Override
+    public String toString() {
+        return nameCoor+"("+x+","+y+")";
+    }
+
+    //  phuong thuc thiet lap get, set
     public int getX() {
         return x;
     }
