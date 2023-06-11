@@ -20,6 +20,9 @@ public class Student {
         this.practiceMark = practiceMark;
     }
 
+    public float average() {
+        return (this.theoryMark + this.practiceMark)/2;
+    }
 //    getter, setter
     public int getId() {
         if (id < 0)
