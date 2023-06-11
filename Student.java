@@ -22,33 +22,41 @@ public class Student {
 
 //    getter, setter
     public int getId() {
+        if (id < 0)
+            return 1;
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
 
     public String getFullName() {
+        if (fullName == "")
+            return "Wrong!!";
         return fullName;
     }
-
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }
 
     public float getTheoryMark() {
-        return theoryMark;
+        if (theoryMark >10)
+            return 10;
+        else if (theoryMark < 0)
+            return 0;
+        return 0f;
     }
-
     public void setTheoryMark(float theoryMark) {
         this.theoryMark = theoryMark;
     }
 
     public float getPracticeMark() {
-        return practiceMark;
+        if (practiceMark >10)
+            return 10;
+        else if (practiceMark < 0)
+            return 0;
+        return 0f;
     }
-
     public void setPracticeMark(float practiceMark) {
         this.practiceMark = practiceMark;
     }
