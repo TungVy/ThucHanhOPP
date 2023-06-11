@@ -19,11 +19,18 @@ public class Student {
         this.theoryMark = theoryMark;
         this.practiceMark = practiceMark;
     }
-
+//      tinh diem trung binh
     public float average() {
         return (this.theoryMark + this.practiceMark)/2;
     }
-//    getter, setter
+
+//    phuong thuc toString dien ta doi tuong dang chuoi
+    @Override
+    public String toString() {
+        return id+"%-5s"+fullName+"%-30s"+theoryMark+"%-30"+practiceMark+"%-30s"+average();
+    }
+
+    //    getter, setter
     public int getId() {
         if (id < 0)
             return 1;
