@@ -27,7 +27,7 @@ public class Student {
 //    phuong thuc toString dien ta doi tuong dang chuoi
     @Override
     public String toString() {
-        return id+"%-5s"+fullName+"%-30s"+theoryMark+"%-30"+practiceMark+"%-30s"+average();
+        return id+" "+fullName+" "+theoryMark+" "+practiceMark+" "+average();
     }
 
     //    getter, setter
