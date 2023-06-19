@@ -29,6 +29,11 @@ public class Triangle {
         }
     }
 
+//      phuong thuc tinh chu vi
+    public float calPerimeter() {
+        return this.ma+this.mb+this.mc;
+    }
+
 //    getter, setter
 
     public float getMa() {
