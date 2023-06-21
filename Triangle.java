@@ -48,15 +48,15 @@ public class Triangle {
 //    phuong thuc nhan dang tam giac
     public String checkTriangle() {
          if (ma >= mb+mc || mb >= ma+mc || mc >= ma+mb) {
-             return "- Khong phai tam giac!!";
+             return "Khong phai tam giac!!";
         }
         else {
              if (ma == mb && ma == mc) {
-                 return "- Tam giac deu!!";
+                 return "Tam giac deu!!";
              } else if (ma == mb || ma == mc || mb == mc) {
-                 return "- Tam giac can!!";
+                 return "Tam giac can!!";
              } else {
-                 return "- Tam giac thuong!!";
+                 return "Tam giac thuong!!";
              }
          }
     }
@@ -69,7 +69,7 @@ public class Triangle {
 
 //    phuong thuc in thong tin tam giac dang bang
     public void printTriangle() {
-        System.out.printf("%-5d%-5d%-5d%-30s%-5.1f%-5.1f\n", ma, mb, mc, checkTriangle(), calPerimeter(), calSuperficiality());
+        System.out.printf("%-10d%-10d%-10d%-25s%-10.1f%-10.1f\n", ma, mb, mc, checkTriangle(), calPerimeter(), calSuperficiality());
     }
 
 //    getter, setter
