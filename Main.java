@@ -34,6 +34,7 @@ public class Main {
         sv3.setPracticeMark(input.nextFloat());
 
         // In danh sach sinh vien
+        System.out.println("\n");
         System.out.printf("%-5s%-25s%-15s%-15s%-15s \n","Id", "FullName", "TheoryMark", "PracticeMark", "AverageMark");
         sv1.printStudent();
         sv2.printStudent();
