@@ -3,7 +3,7 @@ package Week1;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String args[]) {
+    public static void main(String[] agrs) {
 //  kiem nghiem bai 1:
         System.out.println("___Bai 1:");
 
