@@ -44,20 +44,27 @@ public class Triangle {
     }
 
 //    phuong thuc nhan dang tam giac
-    public void checkTriangle() {
+    public String checkTriangle() {
          if (ma >= mb+mc || mb >= ma+mc || mc >= ma+mb) {
-             System.out.println("- Khong phai tam giac!!");
+             return "- Khong phai tam giac!!";
         }
         else {
              if (ma == mb && ma == mc) {
-                 System.out.println("- Tam giac deu!!");
+                 return "- Tam giac deu!!";
              } else if (ma == mb || ma == mc || mb == mc) {
-                 System.out.println("- Tam giac can!!");
+                 return "- Tam giac can!!";
              } else {
-                 System.out.println("- Tam giac thuong!!");
+                 return "- Tam giac thuong!!";
              }
          }
     }
+
+//    phuong thuc toString
+    @Override
+    public String toString() {
+        return ma+" "+mb+" "+mc+" "+checkTriangle()+" "+calPerimeter()+" "+calSuperficiality();
+    }
+
 
 //    getter, setter
 
