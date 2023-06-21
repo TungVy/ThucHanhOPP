@@ -59,6 +59,7 @@ public class Student {
         return id+" "+fullName+" "+theoryMark+" "+practiceMark+" "+average();
     }
 
+//  phuong thuc in thong tin sinh vien dang bang
     public void printStudent() {
         System.out.printf("%-5s%-25s%-15.1f%-15.1f%-15.1f \n", id, fullName, theoryMark, practiceMark, average());
     }
