@@ -65,6 +65,10 @@ public class Triangle {
         return ma+" "+mb+" "+mc+" "+checkTriangle()+" "+calPerimeter()+" "+calSuperficiality();
     }
 
+//    phuong thuc in thong tin tam giac dang bang
+    public void printTriangle() {
+        System.out.printf("%-5d%-5d%-5d%-30s%-5.1f%-5.1f\n", ma, mb, mc, checkTriangle(), calPerimeter(), calSuperficiality());
+    }
 
 //    getter, setter
 
