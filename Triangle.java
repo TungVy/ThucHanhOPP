@@ -34,6 +34,15 @@ public class Triangle {
         return this.ma+this.mb+this.mc;
     }
 
+
+//    phuong tinh dien tich
+
+
+
+
+
+
+
 //    getter, setter
 
     public float getMa() {
