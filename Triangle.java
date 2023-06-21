@@ -1,5 +1,7 @@
 package Week1;
 
+import java.lang.Math;
+
 public class Triangle {
 //    khoi tao bien
     private float ma;
@@ -36,7 +38,10 @@ public class Triangle {
 
 
 //    phuong tinh dien tich
-
+    public double calSuperficiality() {
+        float p = (ma+mb+mc)/2;
+        return Math.sqrt(p*(p-ma)*(p-mb)*(p-mc));
+    }
 
 
 
