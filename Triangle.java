@@ -29,6 +29,8 @@ public class Triangle {
             this.mb = mb;
             this.mc = mc;
         }
+        calPerimeter();
+        calPerimeter();
     }
 
 //      phuong thuc tinh chu vi
