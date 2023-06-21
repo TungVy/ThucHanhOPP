@@ -4,16 +4,16 @@ import java.lang.Math;
 
 public class Triangle {
 //    khoi tao bien
-    private float ma;
-    private float mb;
-    private float mc;
+    private int ma;
+    private int mb;
+    private int mc;
 
 //    Contructor mac dinh
     public Triangle() {
     }
 
     //    Constructor du tham so
-    public Triangle(float ma, float mb, float mc) {
+    public Triangle(int ma, int mb, int mc) {
         if (ma<0 || mb<0 || mc<0) {
             this.ma = 0;
             this.mb = 0;
@@ -43,18 +43,29 @@ public class Triangle {
         return Math.sqrt(p*(p-ma)*(p-mb)*(p-mc));
     }
 
-
-
-
-
+//    phuong thuc nhan dang tam giac
+    public void checkTriangle() {
+         if (ma >= mb+mc || mb >= ma+mc || mc >= ma+mb) {
+             System.out.println("- Khong phai tam giac!!");
+        }
+        else {
+             if (ma == mb && ma == mc) {
+                 System.out.println("- Tam giac deu!!");
+             } else if (ma == mb || ma == mc || mb == mc) {
+                 System.out.println("- Tam giac can!!");
+             } else {
+                 System.out.println("- Tam giac thuong!!");
+             }
+         }
+    }
 
 //    getter, setter
 
-    public float getMa() {
+    public int getMa() {
         return ma;
     }
 
-    public void setMa(float ma) {
+    public void setMa(int ma) {
         if (ma < 0) {
             this.ma = 0;
         }
@@ -63,11 +74,11 @@ public class Triangle {
         }
     }
 
-    public float getMb() {
+    public int getMb() {
         return mb;
     }
 
-    public void setMb(float mb) {
+    public void setMb(int mb) {
         if (mb < 0){
             this.mb = 0;
         }
@@ -76,11 +87,11 @@ public class Triangle {
         }
     }
 
-    public float getMc() {
+    public int getMc() {
         return mc;
     }
 
-    public void setMc(float mc) {
+    public void setMc(int mc) {
         if (mc < 0){
             this.mc = 0;
         }
