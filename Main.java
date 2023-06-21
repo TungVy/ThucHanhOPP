@@ -39,5 +39,22 @@ public class Main {
         sv1.printStudent();
         sv2.printStudent();
         sv3.printStudent();
+
+//        kiem nghiem bai 3:
+        System.out.println("\n___Bai 3:");
+
+        Triangle t1 = new Triangle(2, 3, 4);
+        Triangle t2 = new Triangle(3, 3, 4);
+        Triangle t3 = new Triangle(2, 3, 4);
+        Triangle t4 = new Triangle(2, 3, 4);
+        Triangle t5 = new Triangle(2, 3, 4);
+
+        System.out.printf("%-10s%-10s%-10s%-25s%-10s%-10s\n", "Canh a", "Canh b", "Canh c", "Loai tam giac", "Chu vi", "Dien tich");
+        t1.printTriangle();
+        t2.printTriangle();
+        t3.printTriangle();
+        t4.printTriangle();
+        t5.printTriangle();
+
     }
 }
