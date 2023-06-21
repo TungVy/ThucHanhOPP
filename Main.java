@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] agrs) {
-//  kiem nghiem bai 1:
+/*//  kiem nghiem bai 1:
         System.out.println("___Bai 1:");
 
         Coordinates a = new Coordinates(5, 6, "A");
@@ -39,16 +39,18 @@ public class Main {
         sv1.printStudent();
         sv2.printStudent();
         sv3.printStudent();
-
+*/
 //        kiem nghiem bai 3:
         System.out.println("\n___Bai 3:");
 
-        Triangle t1 = new Triangle(2, 3, 4);
-        Triangle t2 = new Triangle(3, 3, 4);
+//        tao du lieu tam giac
+        Triangle t1 = new Triangle(0, 0, 0);
+        Triangle t2 = new Triangle(1, 1, 3);
         Triangle t3 = new Triangle(2, 3, 4);
-        Triangle t4 = new Triangle(2, 3, 4);
-        Triangle t5 = new Triangle(2, 3, 4);
+        Triangle t4 = new Triangle(5, 5, 3);
+        Triangle t5 = new Triangle(6, 6, 6);
 
+//        xuat thong tin tam giac
         System.out.printf("%-10s%-10s%-10s%-25s%-10s%-10s\n", "Canh a", "Canh b", "Canh c", "Loai tam giac", "Chu vi", "Dien tich");
         t1.printTriangle();
         t2.printTriangle();
