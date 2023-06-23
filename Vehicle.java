@@ -17,18 +17,8 @@ public class Vehicle {
     public Vehicle(String name, String rangeOfVehicle, int cylinderCapacity, double valueOfVehicle) {
         this.name = name;
         this.rangeOfVehicle = rangeOfVehicle;
-        if (cylinderCapacity < 0) {
-            this.cylinderCapacity = 0;
-        }
-        else {
-            this.cylinderCapacity = cylinderCapacity;
-        }
-        if (valueOfVehicle < 0) {
-            this.valueOfVehicle = 0;
-        }
-        else {
-            this.valueOfVehicle = valueOfVehicle;
-        }
+        setCylinderCapacity(cylinderCapacity);
+        setValueOfVehicle(valueOfVehicle);
         calTax();
     }
 
