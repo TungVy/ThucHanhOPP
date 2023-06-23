@@ -17,8 +17,18 @@ public class Vehicle {
     public Vehicle(String name, String rangeOfVehicle, double valueOfVehicle, int cylinderCapacity) {
         this.name = name;
         this.rangeOfVehicle = rangeOfVehicle;
-        this.valueOfVehicle = valueOfVehicle;
-        this.cylinderCapacity = cylinderCapacity;
+        if (valueOfVehicle < 0) {
+            this.valueOfVehicle = 0;
+        }
+        else {
+            this.valueOfVehicle = valueOfVehicle;
+        }
+        if (cylinderCapacity < 0) {
+            this.cylinderCapacity = 0;
+        }
+        else {
+            this.cylinderCapacity = cylinderCapacity;
+        }
     }
 
 //    getter va setter
@@ -35,7 +45,12 @@ public class Vehicle {
     }
 
     public void setRangeOfVehicle(String rangeOfVehicle) {
-        this.rangeOfVehicle = rangeOfVehicle;
+        if (valueOfVehicle < 0) {
+            this.valueOfVehicle = 0;
+        }
+        else {
+            this.valueOfVehicle = valueOfVehicle;
+        }
     }
 
     public double getValueOfVehicle() {
@@ -43,7 +58,12 @@ public class Vehicle {
     }
 
     public void setValueOfVehicle(double valueOfVehicle) {
-        this.valueOfVehicle = valueOfVehicle;
+        if (cylinderCapacity < 0) {
+            this.cylinderCapacity = 0;
+        }
+        else {
+            this.cylinderCapacity = cylinderCapacity;
+        }
     }
 
     public int getCylinderCapacity() {
