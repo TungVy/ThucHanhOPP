@@ -31,6 +31,20 @@ public class Vehicle {
         }
     }
 
+//    phuong thuc tinh muc thue
+    public double calTax() {
+        if (cylinderCapacity < 100) {
+            return valueOfVehicle*0.1;
+        }
+        else if (cylinderCapacity >= 100 && cylinderCapacity <= 200) {
+            return valueOfVehicle*0.3;
+        }
+        else if (cylinderCapacity > 200) {
+            return valueOfVehicle*0.5;
+        }
+        return 0;
+    }
+
 //    getter va setter
     public String getName() {
         return name;
