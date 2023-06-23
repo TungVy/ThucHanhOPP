@@ -24,6 +24,16 @@ public class HangThucPham {
         setNgayHetHan(ngayHetHan);
     }
 
+//    phuong thuc kiem tra HangThucPham het han chua
+    public boolean hetHan() {
+        return ngayHetHan.isBefore(LocalDate.now()) ? true : false;
+    }
+    public String kiemTraHetHan() {
+        if (hetHan() == true) {
+            return "Hang het han";
+        }
+        return "";
+    }
 //    getter, setter
     public String getMaHang() {
         return maHang;
