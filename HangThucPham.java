@@ -16,12 +16,12 @@ public class HangThucPham {
     }
 
 //    constructor day du tham so
-    public HangThucPham(String maHang, String tenHang, double donGia, LocalDate ngaySanXuat, LocalDate ngayHetHan) {
-        this.maHang = maHang;
-        this.tenHang = tenHang;
-        this.donGia = donGia;
-        this.ngaySanXuat = ngaySanXuat;
-        this.ngayHetHan = ngayHetHan;
+    public HangThucPham(String maHang, String tenHang, double donGia, LocalDate ngaySanXuat, LocalDate ngayHetHan) throws Exception {
+        setMaHang(maHang);
+        setTenHang(tenHang);
+        setDonGia(donGia);
+        setNgaySanXuat(ngaySanXuat);
+        setNgayHetHan(ngayHetHan);
     }
 
 //    getter, setter
@@ -29,8 +29,13 @@ public class HangThucPham {
         return maHang;
     }
 
-    public void setMaHang(String maHang) {
-        this.maHang = maHang;
+    public void setMaHang(String maHang) throws Exception {
+        if (!maHang.trim().equals("")) {
+            this.maHang = maHang;
+        }
+        else {
+            throw new Exception("Loi: Ma hang rong!");
+        }
     }
 
     public String getTenHang() {
@@ -38,7 +43,12 @@ public class HangThucPham {
     }
 
     public void setTenHang(String tenHang) {
-        this.tenHang = tenHang;
+        if (tenHang == "") {
+            this.tenHang = "xxx";
+        }
+        else {
+            this.maHang = maHang;
+        }
     }
 
     public double getDonGia() {
@@ -46,7 +56,12 @@ public class HangThucPham {
     }
 
     public void setDonGia(double donGia) {
-        this.donGia = donGia;
+        if (donGia < 0) {
+            this.donGia = 0;
+        }
+        else {
+            this.donGia = donGia;
+        }
     }
 
     public LocalDate getNgaySanXuat() {
@@ -54,7 +69,12 @@ public class HangThucPham {
     }
 
     public void setNgaySanXuat(LocalDate ngaySanXuat) {
-        this.ngaySanXuat = ngaySanXuat;
+        if (ngaySanXuat.isBefore(LocalDate.now())){
+            this.ngaySanXuat = ngaySanXuat;
+        }
+        else {
+            this.ngaySanXuat = LocalDate.now();
+        }
     }
 
     public LocalDate getNgayHetHan() {
@@ -62,6 +82,11 @@ public class HangThucPham {
     }
 
     public void setNgayHetHan(LocalDate ngayHetHan) {
-        this.ngayHetHan = ngayHetHan;
+        if (ngayHetHan.isAfter(ngaySanXuat)){
+            this.ngayHetHan = ngayHetHan;
+        }
+        else {
+            this.ngayHetHan = ngaySanXuat;
+        }
     }
 }
