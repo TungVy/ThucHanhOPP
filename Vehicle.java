@@ -29,6 +29,7 @@ public class Vehicle {
         else {
             this.cylinderCapacity = cylinderCapacity;
         }
+        calTax();
     }
 
 //    phuong thuc tinh muc thue
@@ -43,6 +44,11 @@ public class Vehicle {
             return valueOfVehicle*0.5;
         }
         return 0;
+    }
+
+//    phuong thuc in bang ke khai tien thue cua xe
+    public void printVehicle() {
+        System.out.printf("%-20s%-20s%-10d%-20f%-20f", name, rangeOfVehicle, cylinderCapacity, valueOfVehicle, calTax());
     }
 
 //    getter va setter
