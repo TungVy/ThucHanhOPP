@@ -37,7 +37,7 @@ public class Vehicle {
         if (cylinderCapacity < 100) {
             return valueOfVehicle*0.1;
         }
-        else if (cylinderCapacity >= 100 && cylinderCapacity <= 200) {
+        else if (cylinderCapacity <= 200) {
             return valueOfVehicle*0.3;
         }
         else if (cylinderCapacity > 200) {
