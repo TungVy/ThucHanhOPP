@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] agrs) {
-/*//  kiem nghiem bai 1:
+//  kiem nghiem bai 1:
         System.out.println("___Bai 1:");
 
         Coordinates a = new Coordinates(5, 6, "A");
@@ -35,11 +35,11 @@ public class Main {
 
         // In danh sach sinh vien
         System.out.println("\n");
-        System.out.printf("%-5s%-25s%-15s%-15s%-15s \n","Id", "FullName", "TheoryMark", "PracticeMark", "AverageMark");
+        System.out.printf("%-5s%-25s%-15s%-15s%-15s \n", "Id", "FullName", "TheoryMark", "PracticeMark", "AverageMark");
         sv1.printStudent();
         sv2.printStudent();
         sv3.printStudent();
-*/
+
 //        kiem nghiem bai 3:
         System.out.println("\n___Bai 3:");
 
@@ -58,5 +58,19 @@ public class Main {
         t4.printTriangle();
         t5.printTriangle();
 
+//        kiem nghiem bai 4:
+        System.out.println("\n___Bai4:");
+
+//        tao du lieu xe
+        Vehicle xe1 = new Vehicle("Tung Vy", "Future Neo", 100, 35000000);
+        Vehicle xe2 = new Vehicle("Gia Nhi", "Ford Ranger", 3000, 250000000);
+        Vehicle xe3 = new Vehicle("Bang Di", "Landscape", 1500, 1000000000);
+
+//        xuat bang ke khai tien thue cua xe
+        System.out.printf("%-20s%-20s%-20s%-20s%-20s\n", "Ten chu xe", "Loai xe", "Dung tich", "Tri gia", "Thue phai nop");
+        xe1.printVehicle();
+        xe2.printVehicle();
+        xe3.printVehicle();
     }
+
 }
