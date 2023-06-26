@@ -82,6 +82,4 @@ public class Vehicle {
             this.valueOfVehicle = valueOfVehicle;
         }
     }
-
-
 }
