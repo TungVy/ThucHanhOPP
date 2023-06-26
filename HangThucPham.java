@@ -1,6 +1,11 @@
 package Week1;
 
+import javax.swing.*;
+import java.text.DecimalFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
 
 public class HangThucPham {
 
@@ -25,16 +30,36 @@ public class HangThucPham {
     }
 
 //    phuong thuc kiem tra HangThucPham het han chua
-    public boolean hetHan() {
-        return ngayHetHan.isBefore(LocalDate.now()) ? true : false;
-    }
     public String kiemTraHetHan() {
         if (hetHan() == true) {
             return "Hang het han";
         }
         return "";
     }
-//    getter, setter
+    public boolean hetHan() {
+        return ngayHetHan.isBefore(LocalDate.now()) ? true : false;
+    }
+
+//    dinh dang kieu ngay dd/MM/yyyy
+    LocalDate date;
+    public String dinhDangNgay(LocalDate date) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        return dtf.format(date);
+    }
+
+//    dinh dang so phan so hang nghin
+    public String dinhDangSo() {
+        DecimalFormat df = new DecimalFormat("#,##0,.00");
+        return df.format(donGia);
+    }
+
+//    phuong thuc toString xuat thong tin bang HangThucPham
+    @Override
+    public String toString() {
+        return String.format("%-10s %-10s %-20.2f %-20s %-20s %-20s", maHang, tenHang, donGia, dinhDangNgay(ngaySanXuat), dinhDangNgay(ngayHetHan), kiemTraHetHan());
+    }
+
+    //    getter, setter
     public String getMaHang() {
         return maHang;
     }
