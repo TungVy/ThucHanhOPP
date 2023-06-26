@@ -59,7 +59,7 @@ public class Main {
         t3.printTriangle();
         t4.printTriangle();
         t5.printTriangle();
-*/
+
 //        kiem nghiem bai 4:
         System.out.println("\n___Bai4:");
 
@@ -73,7 +73,7 @@ public class Main {
         xe1.printVehicle();
         xe2.printVehicle();
         xe3.printVehicle();
-
+*/
 //        kiem nghiem bai 5:
         System.out.println("\n___Bai5:");
 
@@ -88,3 +88,15 @@ public class Main {
         System.out.println(h3);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
