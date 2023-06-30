@@ -9,18 +9,19 @@ public class Account {
 
 //    constuctor mac dinh
     public Account() {
+        this(999999, "Chua xac dinh", 50000);
     }
 
 //    constructor day du tham so
     public Account(long accountNumber, String name, double balance) {
-        this.accountNumber = accountNumber;
-        this.name = name;
-        this.balance = balance;
+        setAccountNumber(accountNumber);
+        setName(name);
+        setBalance(balance);
     }
 //    costructor hai tham so
     public Account(long accountNumber, String name) {
-        this.accountNumber = accountNumber;
-        this.name = name;
+        setAccountNumber(accountNumber);
+        setName(name);
     }
 
 //    getter, setter
@@ -29,7 +30,12 @@ public class Account {
     }
 
     public void setAccountNumber(long accountNumber) {
-        this.accountNumber = accountNumber;
+        if (accountNumber <= 0){
+            this.accountNumber = 999999;
+        }
+        else {
+            this.accountNumber = accountNumber;
+        }
     }
 
     public String getName() {
@@ -37,7 +43,12 @@ public class Account {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name.equals("")) {
+            this.name = "Chua xac dinh!";
+        }
+        else {
+            this.name = name;
+        }
     }
 
     public double getBalance() {
@@ -45,7 +56,12 @@ public class Account {
     }
 
     public void setBalance(double balance) {
-        this.balance = balance;
+        if (balance < 50000) {
+            this.balance = 50000;
+        }
+        else {
+            this.balance = balance;
+        }
     }
 
     public double getRate() {
