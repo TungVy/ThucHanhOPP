@@ -50,7 +50,10 @@ public class Account {
         }
     }
 
-    
+//    phuong thuc tinh tien lai
+    public double addInterest() {
+        return balance + balance*RATE;
+    }
 
 //    getter, setter
     public long getAccountNumber() {
