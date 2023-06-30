@@ -5,7 +5,7 @@ public class Account {
     private long accountNumber;
     private String name;
     private double balance;
-    private final double rate =  0.035;
+    private final double RATE =  0.035;
 
 //    constuctor mac dinh
     public Account() {
@@ -65,7 +65,7 @@ public class Account {
     }
 
     public double getRate() {
-        return rate;
+        return RATE;
     }
 }
 
