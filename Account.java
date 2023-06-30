@@ -17,6 +17,7 @@ public class Account {
         setAccountNumber(accountNumber);
         setName(name);
         setBalance(balance);
+        addInterest();
     }
 //    costructor hai tham so
     public Account(long accountNumber, String name) {
@@ -68,8 +69,13 @@ public class Account {
         }
     }
 
+//    phuong thuc toString tra ve chuoi thong tin tai khoan
+    @Override
+    public String toString() {
+        return String.format("%-10d%-20s%-30.2f%-30.2f", accountNumber, name, balance, addInterest());
+    }
 
-//    getter, setter
+    //    getter, setter
     public long getAccountNumber() {
         return accountNumber;
     }
