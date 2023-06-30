@@ -24,6 +24,19 @@ public class Account {
         setName(name);
     }
 
+//    phuong thuc cho phep gui them tien vao tai khoan
+    public boolean deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Thanh cong!");
+            return true;
+        }
+        else {
+            System.out.println("That bai!");
+            return false;
+        }
+    }
+
 //    getter, setter
     public long getAccountNumber() {
         return accountNumber;
