@@ -55,6 +55,20 @@ public class Account {
         return balance + balance*RATE;
     }
 
+//    phuong thuc chuyen tien
+    public boolean transfer (Account acc2, double amount) {
+        if (amount > 0) {
+            acc2.balance += amount;
+            System.out.println("Thanh cong!");
+            return true;
+        }
+        else {
+            System.out.println("That bai!");
+            return false;
+        }
+    }
+
+
 //    getter, setter
     public long getAccountNumber() {
         return accountNumber;
