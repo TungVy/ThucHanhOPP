@@ -1,5 +1,8 @@
 package Week2;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class Account {
 //    khoi tao bien
     private long accountNumber;
@@ -69,10 +72,17 @@ public class Account {
         }
     }
 
+//    dinh dang tien te
+    Locale local = new Locale("vi","vn");
+    public String dinhDangTien(Locale local) {
+        NumberFormat formatter = NumberFormat.getCurrencyInstance(local);
+        return formatter.format(balance);
+    }
+
 //    phuong thuc toString tra ve chuoi thong tin tai khoan
     @Override
     public String toString() {
-        return String.format("%-10d%-20s%-30.2f%-30.2f", accountNumber, name, balance, addInterest());
+        return String.format("%-20d%-20s%-30.2f%-30.2f", accountNumber, name, balance, addInterest());
     }
 
     //    getter, setter
